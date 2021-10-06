@@ -45,6 +45,7 @@ int main(){
     for(int k=0;k<M;k++){
         if(TimeToDeliverLunch <= MinFROMcd[k]){
             TimeToArriveSch = MinFROMcd[k] + 10;
+            break;
         }
     }
     if(!(TimeToArriveSch)){
