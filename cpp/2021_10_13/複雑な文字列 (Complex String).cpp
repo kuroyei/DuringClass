@@ -12,28 +12,25 @@ int main(){
         cin >> string[i];
     }
 
-    int Is3orMore = 0;
-
-    // 文字列数から引く もし同じ文字があれば
-
-    int NumOfKinds = length;
+    char input[5] = {'A', 'B', 'C', 'D', 'E'};
+    bool doesExist[5] = {0,0,0,0,0};
 
     for(int j=0;j<length;j++){
-        for(int k=0;k<length;k++){
-            if(j != k){
-                if(string[j] == string[k]){
-                    NumOfKinds--;
-                }
+        for(int k=0;k<5;k++){
+            if(string[j] == input[k]){
+                doesExist[k] = 1;
             }
-        }
-    
-        if(NumOfKinds >= 3){
-            Is3orMore = 1;
-            break;
         }
     }
 
-    if(Is3orMore != 0){
+    int sumOfDoesExist = 0;
+    for(int l=0;l<5;l++){
+        if(doesExist[l] == true){
+            sumOfDoesExist++;
+        }
+    }
+
+    if(sumOfDoesExist >= 3){
         cout << "Yes";
     } else {
         cout << "No";
