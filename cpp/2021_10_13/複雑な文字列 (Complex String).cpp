@@ -7,9 +7,9 @@ int main(){
     int length;
     cin >> length;
 
-    char string[length];
+    char inpString[length];
     for(int i=0;i<length;i++){
-        cin >> string[i];
+        cin >> inpString[i];
     }
 
     char input[5] = {'A', 'B', 'C', 'D', 'E'};
@@ -17,7 +17,7 @@ int main(){
 
     for(int j=0;j<length;j++){
         for(int k=0;k<5;k++){
-            if(string[j] == input[k]){
+            if(inpString[j] == input[k]){
                 doesExist[k] = 1;
             }
         }
