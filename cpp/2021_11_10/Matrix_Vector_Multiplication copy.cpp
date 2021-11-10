@@ -15,14 +15,14 @@ int main(){
             cin  >> matrixNM[i][j];
         }
     }
-    for(int k=0;k<m;k++){ // iでも良いか
-        cin >> vectorM[k];
+    for(int i=0;i<m;i++){ // iでも良いか
+        cin >> vectorM[i];
     }
 
-    for(int l=0;l<n;l++){
+    for(int i=0;i<n;i++){
         int c = 0;
-        for(int o=0;o<m;o++){
-            c += matrixNM[l][o] * vectorM[o];
+        for(int j=0;j<m;j++){
+            c += matrixNM[i][j] * vectorM[j];
         }
         cout << c << endl;
     }
