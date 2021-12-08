@@ -48,5 +48,8 @@ int main(){
     // 無限乗根
     cout << maxOfAbsolute << endl;
 
+    delete[] xs;
+    delete[] ys;
+    delete[] absolutes;
     return 0;
 }
